@@ -11,8 +11,7 @@ public class Question2
     
     System.out.println("Enter Height in Meters:");
     
-    Scanner in2 = new Scanner(System.in);
-    double height = in2.nextDouble();
+    double height = in.nextDouble();
     
     System.out.println(Weight/(height*height));
   }
