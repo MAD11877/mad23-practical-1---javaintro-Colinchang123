@@ -1,74 +1,31 @@
-import java.util.Scanner;
-import java.util.ArrayList;
-public class Question5
+public class Question4
 {
   public static void main(String[] args)
   {
     /**
-     * Prompt the user for number. This input indicates the number of integers the user will be entering next. 
-     * Print out the mode (highest occurrence) from the set of integers. 
+     * Prints a right angle triangle with *. The base of the triangle depends on the integer given.
      *    e.g.
      *     > 5
-     *     > 2
-     *     > 4
-     *     > 1
-     *     > 3
-     *     > 4
-     *     4
+     *     *****
+     *     ****
+     *     ***
+     *     **
+     *     *
      * 
-     *    e.g.
-     *     > 4
-     *     > 2
-     *     > 2
-     *     > 3
-     *     > 3
-     *     2
-     * Hint: Use a loop to get input. Use another 2 loops to find the mode
+     * Hint: 2 loops are required. System.out.print(...) to print on single line.
      */
      
     Scanner in = new Scanner(System.in);
-    int nums = in.nextInt();
+    int base = in.nextInt();
     
-    ArrayList<Integer> data = new ArrayList<>();
-    ArrayList<Integer> data2 = new ArrayList<>();
-    
-    /*[1, 1, 1, 2, 3, 4, 4, 4]
-    [3, 3, 3, 1, 1, 3, 3, 3]
-    */
-    int highest = 0;
-    int ind = 0;
-    
-    
-    for (int i = nums; i > 0; i--)
+    for (int i = base; i > 0; i--)
     {
-        data.add(in.nextInt());
-    }
-    
-    for (int i : data)
-    {
-        int freq = 0;
-        for (int x : data)
+        for (int x = i; x > 0; x--)
         {
-            if (i == x)
-            {
-                freq ++;
-            }
+            System.out.print("*");
         }
-        
-        data2.add(freq);
+
+        System.out.println("");
     }
-    
-    for (int i = 0; i < nums; i++)
-    {
-        if(data2.get(i) >= highest)
-        {
-            highest = data2.get(i);
-            ind = i;
-        }
-        
-    }
-    System.out.println(data.get(ind));
-    
   }
 }
-
