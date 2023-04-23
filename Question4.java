@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Question4
 {
   public static void main(String[] args)
@@ -18,6 +17,16 @@ public class Question4
      */
      
     Scanner in = new Scanner(System.in);
+    int base = in.nextInt();
     
+    for (int i = base; i > 0; i--)
+    {
+        for (int x = i; x > 0; x--)
+        {
+            System.out.print("*");
+        }
+
+        System.out.println("");
+    }
   }
 }
